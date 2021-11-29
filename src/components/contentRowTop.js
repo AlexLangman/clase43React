@@ -4,6 +4,9 @@ import LastMovie from "./lasMovieInDB"
 import Genres from "./genresInDB"
 
 function ContentRowTop(){
+	const itemsObj = [{"titulo":"Movies in Data Base","cifra":"21","color":"card border-left-primary shadow h-100 py-2","icono":"fas fa-film fa-2x text-gray-300"},
+			{"titulo":"Total awards","cifra":"79","color":"card border-left-success shadow h-100 py-2","icono":"fas fa-award fa-2x text-gray-300"},
+			{"titulo":"Actors quantity","cifra":"49","color":"card border-left-warning shadow h-100 py-2","icono":"fas fa-user fa-2x text-gray-300"}]
     return (
     <div>
         <div className="container-fluid">
@@ -12,9 +15,9 @@ function ContentRowTop(){
 					</div>
 					
 					<div className="row">
-						<Movies items={[{"titulo":"Movies in Data Base","cifra":"21","color":"card border-left-primary shadow h-100 py-2","icono":"fas fa-film fa-2x text-gray-300"},
-								   		  {"titulo":"Total awards","cifra":"79","color":"card border-left-success shadow h-100 py-2","icono":"fas fa-award fa-2x text-gray-300"},
-								   		  {"titulo":"Actors quantity","cifra":"49","color":"card border-left-warning shadow h-100 py-2","icono":"fas fa-user fa-2x text-gray-300"}]}/>
+						{itemsObj.map((itemObj,i)=>{
+							return <Movies item={itemObj} key={i}/>
+						})}
 					</div>
 	
 					<div className="row">
