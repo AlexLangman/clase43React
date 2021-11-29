@@ -1,23 +1,17 @@
+import React from "react"
+
 function Fila(props){
     return (
-        <div>
-            {props.items.map((item,i)=>{
-                <tr>{item.titulo}</tr>
-                <tr>{items.duracion}</tr>
-                <tr>{item.rating}</tr>
-                <tr>{item.generos}</tr>
-                <tr>{item.premios}</tr>
-            })}
-        </div>
-    )
-}
+            <React.Fragment>
+                <tr>
+                    <td>{props.item.titulo}</td>
+                    <td>{props.item.duracion}</td>
+                    <td>{props.item.rating}</td>
+                    <td>{props.item.generos}</td>
+                    <td>{props.item.premios}</td>
+                </tr>
+            </React.Fragment>
+            )
+        }
 
 export default Fila
-
-/* 
-<tr>{props.titulo}</tr>
-                <tr>{props.duracion}</tr>
-                <tr>{props.rating}</tr>
-                <tr>{props.generos}</tr>
-                <tr>{props.premios}</tr>
-*/
